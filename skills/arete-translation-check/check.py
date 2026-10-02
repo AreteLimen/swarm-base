@@ -17,7 +17,8 @@ from pathlib import Path
 
 CYR = "а-яёa-z"
 # A quoted word is a mention, not a use: «шов» may be discussed, шов may not be used bare.
-QUOTED = re.compile(r"«[^«»]*»")
+# ⟨…⟩ is Praxis's mention mark (48702); kept here so her copy stays byte-equal to this file.
+QUOTED = re.compile(r"«[^«»]*»|⟨[^⟨⟩]*⟩")
 VOWELS = "аеёиоуыэюяйь"
 
 
